@@ -6,27 +6,8 @@
     ; ********** REQUIRE ALL TESTING NS **********
     ;-----------------------------------------------------------------------------
     [tst._bootstrap]
-
     [tst.flintstones.dino]
-    [tst.flintstones.slate]
-    ;[tst.flintstones.wilma]
-    ;[tst.flintstones.pebbles]
-    [tst.flintstones.bambam]
-
-    [tst.tupelo.array]
-    [tst.tupelo.array.mutable]
-    [tst.tupelo.chars]
-    [tst.tupelo.core]
-    [tst.tupelo.gotchas]
-    [tst.tupelo.lazy]
-    [tst.tupelo.lexical]
-    [tst.tupelo.misc]
-    [tst.tupelo.math]
-    [tst.tupelo.parse]
-    [tst.tupelo.schema]
-    [tst.tupelo.set]
-    [tst.tupelo.string]
-    [tst.tupelo.vec]
+    [tst.demo.core]
     ;-----------------------------------------------------------------------------
 
     ))
@@ -44,27 +25,8 @@
     ; ********** MUST REPEAT HERE ALL TEST NS FROM ABOVE `(:require ...)` **********
     ;-----------------------------------------------------------------------------
     'tst._bootstrap
-
     'tst.flintstones.dino
-    'tst.flintstones.slate
-    ;'tst.flintstones.wilma
-    ;'tst.flintstones.pebbles
-    'tst.flintstones.bambam
-
-    'tst.tupelo.array
-    'tst.tupelo.array.mutable
-    'tst.tupelo.chars
-    'tst.tupelo.core
-    'tst.tupelo.gotchas
-    'tst.tupelo.lazy
-    'tst.tupelo.lexical
-    'tst.tupelo.misc
-    'tst.tupelo.math
-    'tst.tupelo.parse
-    'tst.tupelo.schema
-    'tst.tupelo.set
-    'tst.tupelo.string
-    'tst.tupelo.vec
+    'tst.demo.core
     ;-----------------------------------------------------------------------------
 
     )

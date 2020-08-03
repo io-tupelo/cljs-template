@@ -1,5 +1,5 @@
 ^{:launch-js "./chrome-headless.bash"
-  } {:main         tupelo.core
+  } {:main         demo.core
      :optimizations :none
      :foreign-libs [
                     {:file     "./resources/public/dino.js"
