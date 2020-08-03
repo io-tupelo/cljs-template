@@ -1,0 +1,31 @@
+
+= ClojureScript Template Project
+
+== Requirements
+
+ - Clojure 1.8.0
+ - Java 1.8
+
+== License
+
+Copyright © 2020  Alan Thompson
+
+Distributed under the link:https://www.eclipse.org/legal/epl-v10.html[Eclipse Public License], the same as Clojure.
+
+== Development Environment
+
+Developed using link:https://www.jetbrains.com/idea/[*IntelliJ IDEA*] 
+with the link:https://cursive-ide.com/[*Cursive* Clojure plugin].
+
+image:resources/intellij-idea-logo-400.png[IntelliJ,200,200]
+
+image:resources/cursive-logo-300.png[Cursive]
+
+YourKit supports open source projects with its full-featured Java Profiler.
+YourKit, LLC is the creator of
+link:https://www.yourkit.com/java/profiler/[YourKit Java Profiler]
+and link:https://www.yourkit.com/.net/profiler/[YourKit .NET Profiler],
+innovative and intelligent tools for profiling Java and .NET applications.
+
+image:https://www.yourkit.com/images/yklogo.png[YourKit,400,400]
+
