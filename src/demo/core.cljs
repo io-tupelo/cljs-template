@@ -22,7 +22,7 @@
   "This text is printed from src/flintstones/core.cljs.
   Go ahead and edit it and see reloading in action. Again, or not.")
 (println "Hello World! ")
-(t/spyx :something (+ 2 3) [1 2 3])
+(t/spyx :something (+ 2 3))
 
 ;---------------------------------------------------------------------------------------------------
 (defn root []
