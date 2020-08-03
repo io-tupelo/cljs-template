@@ -6,10 +6,46 @@
 ;   software.
 (ns demo.core
   (:require
-    [clojure.string :as str]))
+    [tupelo.core :as t]
+    [reagent.core :as r]
+    [reagent.dom :as rdom]
+    ))
 
 (defn add2
   "adds 2 numbers"
   [x y]
   (+ x y))
+
+; NOTE:  it seems this must be in a *.cljs file or it doesn't work on figwheel reloading
+(enable-console-print!)
+(println
+  "This text is printed from src/flintstones/core.cljs.
+  Go ahead and edit it and see reloading in action. Again, or not.")
+(println "Hello World! ")
+(t/spyx :something (+ 2 3) [1 2 3])
+
+;---------------------------------------------------------------------------------------------------
+(defn root []
+  [:div {:class "container"}
+   [:hr]
+   [:div
+    [:p "I am a component!"]
+    [:p.someclass
+     "I have " [:strong "bold"]
+     [:span {:style {:color "red"}} " and red"] " text."]]
+   [:hr]
+   [:div
+    [:p "Last paragraph....."]]])
+
+
+(defn app-start
+  "Initiates the cljs application"
+  []
+  (println "app-start - enter")
+  (rdom/render [root] (js/document.getElementById "tgt-div"))
+  (println "app-start - leave"))
+
+;***************************************************************************************************
+; kick off the app
+(app-start)
 
