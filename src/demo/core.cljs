@@ -4,7 +4,9 @@
 ;   the root of this distribution.  By using this software in any fashion, you are agreeing to be
 ;   bound by the terms of this license.  You must not remove this notice, or any other, from this
 ;   software.
-(ns demo.core
+(ns
+  ^:figwheel-hooks ; metadata tells Figwheel.Main to find & call reload hook fn's are present
+  demo.core
   (:require
     [tupelo.core :as t]
     [reagent.core :as r]
@@ -18,18 +20,19 @@
 
 ; NOTE:  it seems this must be in a *.cljs file or it doesn't work on figwheel reloading
 (enable-console-print!)
-(println
-  "This text is printed from src/flintstones/core.cljs.
-  Go ahead and edit it and see reloading in action. Again, or not.")
-(println "Hello World! ")
+(println "
+  This text is printed from src/demo/core.cljs when it is loaded/reloaded.
+  Go ahead and edit it and see reloading in action. Again, or not.
+  ")
 (t/spyx :something (+ 2 3))
+(t/spyx (add2 3 4))
 
 ;---------------------------------------------------------------------------------------------------
 (defn root []
   [:div {:class "container"}
    [:hr]
    [:div
-    [:p "I am a component!"]
+    [:p "I am a component! Still!!!"]
     [:p.someclass
      "I have " [:strong "bold"]
      [:span {:style {:color "red"}} " and red"] " text."]]
@@ -37,6 +40,15 @@
    [:div
     [:p "Last paragraph....."]]])
 
+(defn ^:before-load reload-hook-before
+ "Figwheel.Main reload hook - before"
+  []
+  (println :reload-hook-before))
+
+(defn ^:after-load reload-hook-after
+  "Figwheel.Main reload hook - after"
+  []
+  (println :reload-hook-after))
 
 (defn app-start
   "Initiates the cljs application"
@@ -46,6 +58,7 @@
   (println "app-start - leave"))
 
 ;***************************************************************************************************
-; kick off the app
-(app-start)
+;***************************************************************************************************
+;***************************************************************************************************
+(app-start) ; kick off the app - call the main function
 
