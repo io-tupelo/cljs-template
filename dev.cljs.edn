@@ -1,6 +1,8 @@
-^{
+^{; ***** METADATA MAP (must have caret!) *****
   ; :ring-handler hello-world.server/handler
-  :open-url   "http://localhost:9500/index.html"
+  ; :open-url     "http://localhost:9500/index.html"
   :auto-testing {:namespaces [tst.demo.core]}
   }
-{:main demo.core}
+{; ***** CONFIG MAP (no caret!) *****
+ :main demo.core
+ }

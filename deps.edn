@@ -14,8 +14,7 @@
            tupelo                          {:mvn/version "20.07.21"}
            }
 
- :paths   ["src" "test"
-           "target" "resources"]
+ :paths   ["src" "test" "target" "resources"]
 
  :aliases {
            :ancient {:main-opts  ["-m" "deps-ancient.deps-ancient"]

@@ -32,7 +32,7 @@
   [:div {:class "container"}
    [:hr]
    [:div
-    [:p "I am a component! Still!!!"]
+    [:p "I am a component!"]
     [:p.someclass
      "I have " [:strong "bold"]
      [:span {:style {:color "red"}} " and red"] " text."]]
@@ -40,10 +40,13 @@
    [:div
     [:p "Last paragraph....."]]])
 
+; We must use `defonce` or a new atom  will be re-initialized at count=0 upon each reload
+(defonce reload-count (atom 0))
 (defn ^:before-load reload-hook-before
  "Figwheel.Main reload hook - before"
   []
-  (println :reload-hook-before))
+  (swap! reload-count inc)
+  (println :reload-hook-before "   count =" @reload-count))
 
 (defn ^:after-load reload-hook-after
   "Figwheel.Main reload hook - after"
