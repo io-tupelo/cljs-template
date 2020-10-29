@@ -1,0 +1,24 @@
+{:source-paths ["src", "test", "target"]
+ :dependencies [[org.clojure/clojure "1.10.2-alpha1"]
+                [org.clojure/clojurescript "1.10.764"]
+
+                [re-frame "1.0.0"]
+                [reagent "0.10.0"]
+                [reagent-utils "0.3.3"]
+
+                [org.clojure/spec.alpha "0.2.176"]
+                [prismatic/schema "1.1.12"]
+                [tupelo "20.07.21"]
+                ]
+ :dev-http     {8080 ["resources/public/" "target"]}
+ :builds       {:dev  {:target     :browser
+                       :output-dir "target/cljs-out/dev"
+                       :asset-path "/cljs-out/dev"
+                       :modules    {:main {:init-fn demo.core/app-start!}}
+                       :devtools   {:after-load demo.core/app-start!}}
+                :test {:target    :browser-test
+                       :test-dir  "target/test"
+                       :devtools  {:http-port 8021
+                                   :http-root "target/test"}}}
+ }
+ 

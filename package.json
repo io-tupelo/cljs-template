@@ -1,0 +1,30 @@
+{
+  "name": "cljs-template",
+  "version": "1.0.0",
+  "description": "ClojureScript Template Project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.11.6"
+  },
+  "scripts": {
+    "test": "npx shadow-cljs watch test",
+    "start": "npx shadow-cljs watch dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/io-tupelo/cljs-template.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/io-tupelo/cljs-template/issues"
+  },
+  "homepage": "https://github.com/io-tupelo/cljs-template#readme"
+}
