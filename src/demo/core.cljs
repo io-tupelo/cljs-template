@@ -40,28 +40,10 @@
    [:div
     [:p "Last paragraph....."]]])
 
-; We must use `defonce` or a new atom  will be re-initialized at count=0 upon each reload
-(defonce reload-count (atom 0))
-(defn ^:before-load reload-hook-before
- "Figwheel.Main reload hook - before"
-  []
-  (swap! reload-count inc)
-  (println :reload-hook-before "   count =" @reload-count))
-
-(defn ^:after-load reload-hook-after
-  "Figwheel.Main reload hook - after"
-  []
-  (println :reload-hook-after))
-
-(defn app-start
+(defn app-start!
   "Initiates the cljs application"
   []
   (println "app-start - enter")
   (rdom/render [root] (js/document.getElementById "tgt-div"))
   (println "app-start - leave"))
-
-;***************************************************************************************************
-;***************************************************************************************************
-;***************************************************************************************************
-(app-start) ; kick off the app - call the main function
 
