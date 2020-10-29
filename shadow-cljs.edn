@@ -17,8 +17,8 @@
                        :modules    {:main {:init-fn demo.core/app-start!}}
                        :devtools   {:after-load demo.core/app-start!}}
                 :test {:target    :browser-test
-                       :test-dir  "resources/public/js/test"
+                       :test-dir  "target/test"
                        :devtools  {:http-port 8021
-                                   :http-root "resources/public/js/test"}}}
+                                   :http-root "target/test"}}}
  }
  
